@@ -1,0 +1,2 @@
+The K3s server needs port 6443 to be accessible by all nodes.
+
