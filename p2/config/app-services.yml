@@ -1,3 +1,5 @@
+# A service file is used to expose a deployment
+# to the outside world. Providing a a stable endpoint (IP adress)
 ---
 apiVersion: v1
 kind: Service

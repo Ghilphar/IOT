@@ -1,3 +1,5 @@
+# Allows external access to services within the cluster, typically via HTTP or HTTPS
+
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:

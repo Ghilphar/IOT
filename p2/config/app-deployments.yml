@@ -1,3 +1,12 @@
+# Defition of the app deployments
+# 3 applications are deployed
+# app1-deployment : 1 replica
+# app2-deployment : 3 replicas
+# app3-deployment : 1 replica
+
+# A deployment is an kubernetes object that allows to manage the life cycle of a pod
+# It allows to create, update and delete pods
+# It also allows to manage the number of replicas of a pod
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -18,7 +27,7 @@ spec:
         image: paulbouwer/hello-kubernetes:1.10.1
         env:
         - name: MESSAGE
-          value: "Bienvenus dans notre application numero 1 !"
+          value: "Bienvenue dans notre application numero 1 !"
 
 ---
 apiVersion: apps/v1
@@ -62,4 +71,4 @@ spec:
         image: paulbouwer/hello-kubernetes:1.10.1
         env:
         - name: MESSAGE
-          value: "Bienvenus dans notre application principale ! (3)"
+          value: "Bienvenue dans notre application principale ! (3)"
