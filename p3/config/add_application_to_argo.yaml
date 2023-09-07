@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: iot-p3-app
+  namespace: argocd
+spec:
+  project: dev-project
+  source:
+    repoURL: https://github.com/Ghilphar/IOT_p3
+    targetRevision: HEAD
+    path: manifests/ # Assuming you have a folder named 'manifests' with Kubernetes YAMLs.
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: dev
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

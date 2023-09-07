@@ -1,0 +1,4 @@
+kubectl cluster-info
+docker stats
+kubectl top nodes
+kubectl get pods -A
