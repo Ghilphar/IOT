@@ -2,3 +2,5 @@ kubectl cluster-info
 docker stats
 kubectl top nodes
 kubectl get pods -A
+k3d cluster list
+k3d cluster destroy
