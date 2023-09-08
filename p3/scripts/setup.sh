@@ -41,7 +41,7 @@ fi
 
 echo ">>> Installing ArgoCD"
 #kubectl apply -f ../config/install_argocd.yaml -n argocd
-kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+kubectl apply -n argocd -f ../config/install_argocd.yaml
 # waiting for all pods to be ready
 kubectl wait --for=condition=Ready --timeout=5m pods --all -n argocd
 
@@ -69,3 +69,4 @@ kubectl apply -f ../config/add_application_to_argo.yaml -n argocd
 kubectl wait --for=condition=Ready --timeout=5m pods --all -n argocd
 
 echo ">>> Script execution completed"
+# kubectl port-forward svc/wil-playground -n dev 8888:8888

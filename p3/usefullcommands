@@ -4,3 +4,4 @@ kubectl top nodes
 kubectl get pods -A
 k3d cluster list
 k3d cluster destroy
+k3d cluster delete [name]

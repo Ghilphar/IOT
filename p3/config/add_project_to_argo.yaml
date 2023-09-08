@@ -6,10 +6,7 @@ metadata:
 spec:
   description: Dev Project for Wil's Application
   sourceRepos:
-  - '*'
+    - 'https://github.com/Ghilphar/*'
   destinations:
-  - namespace: dev
-    server: https://kubernetes.default.svc
-  clusterResourceWhitelist:
-  - group: '*'
-    kind: '*'
+    - namespace: dev
+      server: https://kubernetes.default.svc
